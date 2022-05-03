@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Classes" representedClassName="Classes" syncable="YES" codeGenerationType="class">
+        <attribute name="classesImage" optional="YES" attributeType="URI"/>
+        <attribute name="classesName" optional="YES" attributeType="String"/>
+        <attribute name="jobsList" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Jobs" representedClassName="Jobs" syncable="YES" codeGenerationType="class">
+        <attribute name="isStarred" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jobsImage" optional="YES" attributeType="URI"/>
+        <attribute name="jobsName" optional="YES" attributeType="String"/>
+        <attribute name="skillsList" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Skills" representedClassName="Skills" syncable="YES" codeGenerationType="class">
+        <attribute name="skillsImage" optional="YES" attributeType="URI"/>
+        <attribute name="skillsName" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Jobs" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Skills" positionX="-54" positionY="-9" width="128" height="59"/>
+        <element name="Classes" positionX="-36" positionY="9" width="128" height="74"/>
+    </elements>
+</model>
