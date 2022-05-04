@@ -7,11 +7,13 @@
 
 import Foundation
 import SwiftUI
+import PartialSheet
 
 struct SkillsView: View {
     let jobs: String
     private let firstSkill: [[String]] = [["더블피어싱", "1"], ["탤런트 오브 팬텀시프 Ⅰ", "1"], ["스위프트 팬텀", "M"], ["탤런트 오브 팬텀시프 Ⅰ", "M"], ["더블 피어싱", "M"], ["퀵 이베이젼", "M"]]
     @State private var selectedSkillIndex = "1"
+    @State private var showingSheet = false
     
     var body: some View {
         VStack {
@@ -57,9 +59,12 @@ struct SkillsView: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {print("상세보기")}) {
-                    Text("상세보기")
+                Button(action: {showingSheet.toggle()}) {
+                    Text("상세정보")
                         .foregroundColor(.orange)
+                        .partialSheet(isPresented: $showingSheet) {
+                            DetailSheetView(jobs: jobs)
+                        }
                 }
             }
         }

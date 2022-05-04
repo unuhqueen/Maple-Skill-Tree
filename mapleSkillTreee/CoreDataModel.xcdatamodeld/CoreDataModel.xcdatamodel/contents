@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Classes" representedClassName="Classes" syncable="YES" codeGenerationType="class">
+    <entity name="ClassesEntity" representedClassName="ClassesEntity" syncable="YES">
         <attribute name="classesImage" optional="YES" attributeType="URI"/>
         <attribute name="classesName" optional="YES" attributeType="String"/>
-        <attribute name="jobsList" optional="YES" attributeType="String"/>
+        <relationship name="jobsRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="JobsEntity" inverseName="classRelationship" inverseEntity="JobsEntity"/>
     </entity>
-    <entity name="Jobs" representedClassName="Jobs" syncable="YES" codeGenerationType="class">
+    <entity name="JobsEntity" representedClassName="JobsEntity" syncable="YES">
         <attribute name="isStarred" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="jobsImage" optional="YES" attributeType="URI"/>
+        <attribute name="jobsLink" optional="YES" attributeType="String"/>
         <attribute name="jobsName" optional="YES" attributeType="String"/>
-        <attribute name="skillsList" optional="YES" attributeType="String"/>
+        <attribute name="jobsUnion" optional="YES" attributeType="String"/>
+        <relationship name="classRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClassesEntity" inverseName="jobsRelationship" inverseEntity="ClassesEntity"/>
+        <relationship name="skillsRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SkillsEntity" inverseName="jobRelationship" inverseEntity="SkillsEntity"/>
     </entity>
-    <entity name="Skills" representedClassName="Skills" syncable="YES" codeGenerationType="class">
+    <entity name="SkillsEntity" representedClassName="SkillsEntity" syncable="YES">
+        <attribute name="skillsDegree" optional="YES" attributeType="String"/>
         <attribute name="skillsImage" optional="YES" attributeType="URI"/>
-        <attribute name="skillsName" optional="YES" attributeType="String"/>
+        <attribute name="skillsName" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <relationship name="jobRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="JobsEntity" inverseName="skillsRelationship" inverseEntity="JobsEntity"/>
     </entity>
     <elements>
-        <element name="Jobs" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="Skills" positionX="-54" positionY="-9" width="128" height="59"/>
-        <element name="Classes" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="ClassesEntity" positionX="-29.04296875" positionY="-321.44140625" width="128" height="88"/>
+        <element name="JobsEntity" positionX="-31.5546875" positionY="-124.49609375" width="128" height="148"/>
+        <element name="SkillsEntity" positionX="352.99609375" positionY="62.90234375" width="128" height="103"/>
     </elements>
 </model>
