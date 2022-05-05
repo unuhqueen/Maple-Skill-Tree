@@ -22,7 +22,8 @@
 		3DF63728281B6C96000CA8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF63727281B6C96000CA8E9 /* Assets.xcassets */; };
 		3DF6372B281B6C96000CA8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF6372A281B6C96000CA8E9 /* Preview Assets.xcassets */; };
 		3DF6373C281B8EFC000CA8E9 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6373A281B8EFC000CA8E9 /* CoreDataModel.xcdatamodeld */; };
-		3DFBD0532822014800F35DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBD0522822014800F35DEF /* AppDelegate.swift */; };
+		3DFBD0752822078A00F35DEF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBD0742822078A00F35DEF /* Persistence.swift */; };
+		3DFBD079282220F800F35DEF /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DFBD078282220F800F35DEF /* mock.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		3DF63727281B6C96000CA8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF6372A281B6C96000CA8E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3DF6373B281B8EFC000CA8E9 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		3DFBD0522822014800F35DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3DFBD0742822078A00F35DEF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = Model/Data/Persistence.swift; sourceTree = "<group>"; };
+		3DFBD078282220F800F35DEF /* mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		3D39CDC928210BC100FA26C3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3DFBD078282220F800F35DEF /* mock.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -110,7 +113,7 @@
 				3D39CDC42820EFBD00FA26C3 /* View */,
 				3D39CDC32820EEA800FA26C3 /* Model */,
 				3DF63723281B6C95000CA8E9 /* mapleSkillTreeeApp.swift */,
-				3DFBD0522822014800F35DEF /* AppDelegate.swift */,
+				3DFBD0742822078A00F35DEF /* Persistence.swift */,
 				3DF63727281B6C96000CA8E9 /* Assets.xcassets */,
 				3DF63729281B6C96000CA8E9 /* Preview Content */,
 				3DF6373A281B8EFC000CA8E9 /* CoreDataModel.xcdatamodeld */,
@@ -192,6 +195,7 @@
 			files = (
 				3DF6372B281B6C96000CA8E9 /* Preview Assets.xcassets in Resources */,
 				3DF63728281B6C96000CA8E9 /* Assets.xcassets in Resources */,
+				3DFBD079282220F800F35DEF /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +212,8 @@
 				3D39CDC02820EE9700FA26C3 /* ClassesEntity+CoreDataProperties.swift in Sources */,
 				3D39CDBE2820EE9700FA26C3 /* SkillsEntity+CoreDataProperties.swift in Sources */,
 				3D7D19CF281FB44B002F011B /* SkiilsView.swift in Sources */,
-				3DFBD0532822014800F35DEF /* AppDelegate.swift in Sources */,
 				3DF63724281B6C95000CA8E9 /* mapleSkillTreeeApp.swift in Sources */,
+				3DFBD0752822078A00F35DEF /* Persistence.swift in Sources */,
 				3D39CD6F2820B29700FA26C3 /* DetailSheetView.swift in Sources */,
 				3D39CDC22820EE9700FA26C3 /* JobsEntity+CoreDataProperties.swift in Sources */,
 				3D7D19CD281F5911002F011B /* JobsView.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftUI
 struct mapleSkillTreeeApp: App {
     var body: some Scene {
         WindowGroup {
-            ClassesView()
+            ClassesView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
 }

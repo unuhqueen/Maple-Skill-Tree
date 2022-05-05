@@ -54,18 +54,6 @@ struct ClassesView: View {
         }
         .accentColor(.orange)
         .attachPartialSheetToRoot()
-        .onAppear {
-            saveJobs(jobsName: "히어로", classesName: "모험가")
-        }
-    }
-    
-    func saveJobs(jobsName: String, classesName: String) {
-        let job = JobsEntity(context: moc) // 여기서 에러 발생
-        job.jobsName = jobsName
-        job.classRelationship = ClassesEntity(context: moc)
-        job.classRelationship?.classesName = classesName
-        
-        try? moc.save()
     }
 }
 
